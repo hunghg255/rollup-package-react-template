@@ -1,0 +1,63 @@
+{
+  "name": "rollup-package-react-template",
+  "version": "2.0.7",
+  "description": "A fully customizable, one-time password input component for the web built with React",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "release": "npm run build && changeset publish",
+    "size": "npm run build && size-limit"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@types/node": "^20.2.3",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "rollup": "^3.23.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "size-limit": "^8.2.4",
+    "typescript": "^4.7.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "author": "hunghg255",
+  "license": "ISC",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "size-limit": [
+    {
+      "path": "dist/esm/index.js",
+      "name": "Hi",
+      "import": "{ Hi }",
+      "limit": "3 KB"
+    },
+    {
+      "path": "dist/esm/index.js",
+      "name": "Hello",
+      "import": "{ Hello }",
+      "limit": "3 KB"
+    }
+  ]
+}
