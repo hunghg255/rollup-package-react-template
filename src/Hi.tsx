@@ -1,13 +1,11 @@
 import React from 'react';
 
-interface IPropsHi {}
-
-const Hi = (props: IPropsHi) => {
+const Hi = () => {
   return (
     <>
       <h1>Hello Hi</h1>
     </>
   );
-}
+};
 
-export  {Hi};
+export { Hi };

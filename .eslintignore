@@ -1,6 +1,20 @@
-# Dependencies
-node_modules/
+# Ignore artifacts:
+build
+coverage
 
-# Config
-webpack.config.js
-src/index.tsx
+node_modules
+
+# Ignore all HTML files:
+*.html
+
+.github
+
+.next
+
+.swc
+
+vite.config.ts
+
+dist
+
+rollup.config.js

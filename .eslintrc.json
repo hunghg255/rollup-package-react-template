@@ -1,29 +1,5 @@
 {
-  "env": {
-    "browser": true
-  },
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "sourceType": "module"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:import/recommended",
-    "plugin:prettier/recommended",
-    "prettier"
-  ],
-  "rules": {
-    "no-unused-vars": "off",
-    "react/prop-types": "off"
-  }
+    "@hunghg255/eslint-config-react"
+  ]
 }

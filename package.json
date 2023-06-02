@@ -1,17 +1,15 @@
 {
   "name": "rollup-package-react-template",
-  "version": "2.0.7",
-  "description": "A fully customizable, one-time password input component for the web built with React",
+  "version": "0.0.0",
+  "description": "",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "release": "npm run build && changeset publish",
-    "size": "npm run build && size-limit"
+    "size": "npm run build && size-limit",
+    "lint": "eslint --ext .ts,.tsx src --color"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
-    "@babel/preset-typescript": "^7.16.0",
+    "@hunghg255/eslint-config-react": "^0.0.7",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.3",
@@ -20,8 +18,7 @@
     "@types/node": "^20.2.3",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
-    "babel-loader": "^8.2.3",
-    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.8.8",
     "rollup": "^3.23.0",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -35,8 +32,8 @@
   ],
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
-  "author": "hunghg255",
-  "license": "ISC",
+  "author": "hunghg255 <giahunghust@gmail.com>",
+  "license": "MIT",
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -59,5 +56,14 @@
       "import": "{ Hello }",
       "limit": "3 KB"
     }
-  ]
+  ],
+  "keywords": [],
+  "homepage": "https://github.com/hunghg255/css2tailwind",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hunghg255/css2tailwind"
+  },
+  "bugs": {
+    "url": "https://github.com/hunghg255/css2tailwind/issues"
+  }
 }
