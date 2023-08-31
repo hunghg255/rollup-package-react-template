@@ -4,27 +4,33 @@
   "description": "",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
-    "release": "npm run build && changeset publish",
     "size": "npm run build && size-limit",
-    "lint": "eslint --ext .ts,.tsx src --color"
+    "lint": "eslint --ext .ts,.tsx src --color",
+    "test": "vitest",
+    "verify-commit": "verify-commit-msg",
+    "postinstall": "git-scm-hooks",
+    "release": "bumpp -r && npm publish"
   },
   "devDependencies": {
     "@hunghg255/eslint-config-react": "^0.0.7",
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-terser": "^0.4.3",
-    "@rollup/plugin-typescript": "^11.1.1",
-    "@size-limit/preset-small-lib": "^8.2.4",
-    "@types/node": "^20.2.3",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "eslint": "^8.41.0",
+    "@rollup/plugin-typescript": "^11.1.3",
+    "@size-limit/preset-small-lib": "^8.2.6",
+    "@types/node": "^20.5.7",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.48.0",
+    "git-scm-hooks": "^0.0.7",
     "prettier": "^2.8.8",
-    "rollup": "^3.23.0",
-    "rollup-plugin-dts": "^5.3.0",
+    "rollup": "^3.28.1",
+    "rollup-plugin-dts": "^5.3.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "size-limit": "^8.2.4",
-    "typescript": "^4.7.4"
+    "size-limit": "^8.2.6",
+    "typescript": "^4.9.5",
+    "verify-commit-msg": "^0.0.9"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -66,5 +72,9 @@
   },
   "bugs": {
     "url": "https://github.com/hunghg255/hunghg255/issues"
+  },
+  "git-hooks": {
+    "pre-commit": "npm run lint",
+    "commit-msg": "npm run verify-commit"
   }
 }
