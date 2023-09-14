@@ -16,5 +16,5 @@ node_modules
 vite.config.ts
 
 dist
-
+build
 rollup.config.js
